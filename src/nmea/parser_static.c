@@ -35,6 +35,9 @@ DECLARE_PARSER_API(gngll)
 #ifdef ENABLE_GPGSA
 DECLARE_PARSER_API(gpgsa)
 #endif
+#ifdef ENABLE_GNGSA
+DECLARE_PARSER_API(gngsa)
+#endif
 #ifdef ENABLE_GPGSV
 DECLARE_PARSER_API(gpgsv)
 #endif
@@ -83,6 +86,9 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_GPGSA
 	PARSER_LOAD(gpgsa);
+#endif
+#ifdef ENABLE_GNGSA
+	PARSER_LOAD(gngsa);
 #endif
 #ifdef ENABLE_GPGSV
 	PARSER_LOAD(gpgsv);
